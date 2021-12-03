@@ -452,7 +452,8 @@ class ProfCoursTest extends TestCase
     {
         print __METHOD__."\n";
         $conn = $this->getConnection();
-
+        //$idProf = 8;   // Si cette valeur vaut null la suppression concernera le 1é enregistrement.
+        $idCours = 7;
         // Suppression sans id à supprimer ==> la suppression conccernera le premier enregistrement de la table.
         // Prof
         $val = Prof::deleteOne($conn);
@@ -466,7 +467,7 @@ class ProfCoursTest extends TestCase
 
         // Cours
         $val = Cours::deleteOne($conn, $idCours);
-        $this->assertTrue($val, "Cours num $idCours supprimer avec succès\n");
+        $this->assertTrue($val, "Cours  supprimer avec succès\n");
         $record_cours_a = Cours::printAll($conn);
         print "@@@@@@@@@@@@@ - LISTE DES COURS APRES SUPPRESSION - Vérifiez le cours num  @@@@@@@@@@@@@ \n";
         foreach( $record_cours_a as $record_cours) {
