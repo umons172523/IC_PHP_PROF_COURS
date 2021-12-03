@@ -468,7 +468,7 @@ class ProfCoursTest extends TestCase
         $val = Cours::deleteOne($conn, $idCours);
         $this->assertTrue($val, "Cours num $idCours supprimer avec succès\n");
         $record_cours_a = Cours::printAll($conn);
-        print "@@@@@@@@@@@@@ - LISTE DES COURS APRES SUPPRESSION - Vérifiez le cours num $idCours @@@@@@@@@@@@@ \n";
+        print "@@@@@@@@@@@@@ - LISTE DES COURS APRES SUPPRESSION - Vérifiez le cours num  @@@@@@@@@@@@@ \n";
         foreach( $record_cours_a as $record_cours) {
             print $record_cours;
         }
