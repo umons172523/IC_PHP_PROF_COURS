@@ -225,7 +225,7 @@ class ProfCoursTest extends TestCase
         }
         print "################################################################\n\n";
         $this->assertCount(count(Self::$cours_a), $record_cours_a, "Nombre d'enregistrement égale pour cours\n");
-
+//test
         /**
         *
         * Question 9 : Dans la fonction « testPrintAll() », 
