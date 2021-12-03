@@ -70,7 +70,7 @@ class ProfCoursTest extends TestCase
             * Question 6 : Insérer les enregistrements suivantes dans la table prof 
             *
             */
-            
+
             new Prof("Nom_prof1", "Prenom_prof1", "10/01/1982", "lieu_prof1"),      // idprof = 1
             new Prof("Nom_prof2", "Prenom_prof2", "10/02/1982", "lieu_prof2"),      // idprof = 2
             new Prof("Nom_prof3", "Prenom_prof3", "10/03/1982", "lieu_prof3"),      // idprof = 3
@@ -81,6 +81,8 @@ class ProfCoursTest extends TestCase
             new Prof("Nom_prof8", "Prenom_prof8", "10/08/1982", "lieu_prof8"),      // idprof = 8       ** A SUPPRIMER **
             new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 9
             new Prof("Nom_prof10", "Prenom_prof10", "10/10/1982", "lieu_prof10")    // idprof = 10      ** A MODIFIER **
+            #$sql = "INSERT INTO Prof(idProf,nom,prenom,date_naissance,lieu_naissance) VALUES(NULL,'$nom','$prenom','$date_naissance','$lieu_naissance')";
+
         ];
 
         self::$cours_a = [
@@ -93,7 +95,7 @@ class ProfCoursTest extends TestCase
             new Cours("Cours7", "3", 5),       // idcours = 7   ** A SUPPRIMER **
             new Cours("Cours8", "4", 5),       // idcours = 8
             new Cours("Cours9", "3", 5),        // idcours = 9   ** A MODIFIER **
-            
+            new Cours("Cours10", "3", 5),        // idcours = 9
             /**
             *
             * Question 7 : Insérer les enregistrements suivantes dans la table cours
